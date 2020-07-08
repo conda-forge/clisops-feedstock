@@ -5,7 +5,7 @@ Home: https://pypi.org/project/clisops/
 
 Package license: BSD-3-Clause
 
-Feedstock license: BSD 3-Clause
+Feedstock license: BSD-3-Clause
 
 Summary: clisops - climate simulation operations
 
