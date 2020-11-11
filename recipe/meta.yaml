@@ -21,6 +21,7 @@ requirements:
     - pytest-runner
   run:
     - python
+    - pip
     - numpy >=1.16
     - xarray >=0.15
     - pandas >=1.0.3
@@ -36,7 +37,6 @@ requirements:
     - pyproj >=2.5
     - rtree >=0.9
     - udunits2 >=2.2
-    - roocs-utils >=0.1.4
 
 test:
   imports:
