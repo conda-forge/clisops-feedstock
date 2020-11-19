@@ -36,7 +36,7 @@ requirements:
     - pyproj >=2.5
     - rtree >=0.9
     - udunits2 >=2.2
-    - roocs-utils >= 0.1.4
+    - roocs-utils >=0.1.4
 
 test:
   imports:
