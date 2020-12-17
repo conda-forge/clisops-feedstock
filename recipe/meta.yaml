@@ -1,5 +1,5 @@
 {% set name = "clisops" %}
-{% set version = "0.4.0" %}
+{% set version = "0.5.0" %}
 
 package:
   name: {{ name|lower }}
@@ -7,7 +7,7 @@ package:
 
 source:
   url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/{{ name }}-{{ version }}.tar.gz
-  sha256: 542bf60bfc6e42464874057fe269572390fc7b99160566baa4dd2b94dbc5f7ce
+  sha256: 32d41afc9fa8cb8f6f70337fb4f5cf4b2e1f575e3e54fa011bbc8e13c143c6ac
 
 build:
   number: 0
@@ -16,11 +16,11 @@ build:
 
 requirements:
   host:
-    - python >=3.6
+    - python
     - pip
     - pytest-runner
   run:
-    - python
+    - python >=3.6
     - numpy >=1.16
     - xarray >=0.15
     - pandas >=1.0.3
@@ -34,9 +34,8 @@ requirements:
     - dask >=2.6.0
     - bottleneck >=1.3.1,<1.4
     - pyproj >=2.5
-    - rtree >=0.9
-    - udunits2 >=2.2
     - roocs-utils >=0.1.4
+    - python-dateutil >=2.8.1
 
 test:
   imports:
