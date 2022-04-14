@@ -1,5 +1,5 @@
 {% set name = "clisops" %}
-{% set version = "0.8.0" %}
+{% set version = "0.9.0" %}
 
 package:
   name: {{ name|lower }}
@@ -7,7 +7,7 @@ package:
 
 source:
   url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/{{ name }}-{{ version }}.tar.gz
-  sha256: 9d32d935bec6c42ad6d117262231ea42538cca377833f8099b69067d5f7c5322
+  sha256: 4f251dfc1fe161c185f0b076c64c998df0f89cece2a1df44ac4dcf5ddb58e356
 
 build:
   number: 0
@@ -23,7 +23,7 @@ requirements:
     - python >=3.6
     - numpy >=1.16
     - xarray >=0.15
-    - pandas >=1.0.3
+    - pandas >=1.0.3,<1.4
     - cftime >=1.4.1
     - netCDF4 >=1.4
     - poppler >=0.67
@@ -31,12 +31,14 @@ requirements:
     - geopandas >=0.7
     - xesmf >=0.6.2
     - dask >=2.6.0
-    - bottleneck >=1.3.1
+    - bottleneck >=1.3.1,<1.4
     - pyproj >=2.5
+    - pooch
     - roocs-utils >=0.5.0
     - requests >=2.0
-    - cf_xarray >=0.5.1
+    - cf_xarray >=0.7.0
     - pygeos >=0.9
+    - loguru >=0.5.3
 
 test:
   imports:
