@@ -1,11 +1,11 @@
-About clisops
-=============
+About clisops-feedstock
+=======================
+
+Feedstock license: [BSD-3-Clause](https://github.com/conda-forge/clisops-feedstock/blob/main/LICENSE.txt)
 
 Home: https://pypi.org/project/clisops/
 
 Package license: BSD-3-Clause
-
-Feedstock license: [BSD-3-Clause](https://github.com/conda-forge/clisops-feedstock/blob/main/LICENSE.txt)
 
 Summary: clisops - climate simulation operations
 
