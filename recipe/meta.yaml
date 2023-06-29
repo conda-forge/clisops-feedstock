@@ -1,5 +1,5 @@
 {% set name = "clisops" %}
-{% set version = "0.9.6" %}
+{% set version = "0.10.0" %}
 
 package:
   name: {{ name|lower }}
@@ -7,7 +7,7 @@ package:
 
 source:
   url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/{{ name }}-{{ version }}.tar.gz
-  sha256: 4cf9e73ccc82e67742bd44e0cb88f79e30192439bfaf94a382460a735cb3e275
+  sha256: c4a86af48e8c9041825d8774efbbb9354e2a5644b3be6955a87db2a54bcc630d
 
 build:
   number: 0
@@ -20,26 +20,25 @@ requirements:
     - pip
     - pytest-runner
   run:
-    - python >=3.6
-    - bottleneck >=1.3.1,<1.4
+    - python >=3.8
+    - bottleneck >=1.3.1
     - cf_xarray >=0.7.0
     - cftime >=1.4.1
     - dask >=2.6.0
-    - geopandas >=0.7
+    - geopandas >=0.11.0
     - loguru >=0.5.3
     - netCDF4 >=1.4
     - numpy >=1.16
     - packaging
-    - pandas >=1.0.3,<1.4
+    - pandas >=1.0.3
     - poppler >=0.67
     - pooch
-    - pygeos >=0.9
     - pyproj >=2.5
     - requests >=2.0
-    - roocs-utils >=0.5.0
-    - shapely >=1.6
-    - xarray >=0.15
-    - xesmf >=0.6.2
+    - roocs-utils >=0.6.4,<0.7
+    - shapely >=1.9
+    - xarray >=0.21
+    - xesmf >=0.6.3
 
 test:
   imports:
@@ -51,7 +50,6 @@ about:
   license_family: BSD
   license_file: LICENSE
   summary: clisops - climate simulation operations
-
   description: |
     The clisops package (pronounced "clie-sops") provides a python library for running
     data-reduction operations on xarray data sets or files
