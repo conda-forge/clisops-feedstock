@@ -45,6 +45,7 @@ test:
   imports:
     - clisops
   requires:
+    - git  # Required by GitPython
     - gitpython 
     - pip
     - pytest
