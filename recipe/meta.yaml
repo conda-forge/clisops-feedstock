@@ -28,6 +28,7 @@ requirements:
     - geopandas >=0.11.0
     - loguru >=0.5.3
     - netCDF4 >=1.4
+    - numba  # Must be specified for xemsf (fixed with v0.7.0)
     - numpy >=1.16
     - packaging
     - pandas >=1.0.3
@@ -36,6 +37,7 @@ requirements:
     - requests >=2.0
     - roocs-utils >=0.6.4,<0.7
     - shapely >=1.9
+    - sparse >=0.8.0  # Must be specified for xemsf (fixed with v0.7.0)
     - xarray >=0.21
     - xesmf >=0.6.3
 
