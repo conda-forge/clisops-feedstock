@@ -45,6 +45,7 @@ test:
   imports:
     - clisops
   requires:
+    - gitpython 
     - pip
     - pytest
     - pytest-loguru
