@@ -1,5 +1,5 @@
 {% set name = "clisops" %}
-{% set version = "0.11.0" %}
+{% set version = "0.12.0" %}
 
 package:
   name: {{ name|lower }}
@@ -7,7 +7,7 @@ package:
 
 source:
   url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/{{ name }}-{{ version }}.tar.gz
-  sha256: 8c9a50e87ee8e4bf03af82bf0bacc74f591837841d760c09241cf2f5008627f9
+  sha256: f0fd34ee51ce181fed9b2130b33e10e477a52b9db715143f12b2696d1b76c131
 
 build:
   number: 0
@@ -20,9 +20,9 @@ requirements:
     - flit
     - pip
   run:
-    - python >=3.8
+    - python >=3.9
     - bottleneck >=1.3.1
-    - cf_xarray >=0.7.0
+    - cf_xarray >=0.8.6
     - cftime >=1.4.1
     - dask >=2.6.0
     - geopandas >=0.11.0
@@ -36,17 +36,18 @@ requirements:
     - pyproj >=3.3.0
     - requests >=2.0
     - roocs-utils >=0.6.4,<0.7
+    - roocs-grids >=0.1.2
     - shapely >=1.9
     - sparse >=0.8.0  # Must be specified for xemsf (fixed with v0.7.0)
-    - xarray >=0.21
-    - xesmf >=0.6.3
+    - xarray >=0.21,<2023.3.0 # Remove pin when xarray is fixed (see: https://github.com/pydata/xarray/issues/7794)
+    - xesmf >=0.8.2
 
 test:
   imports:
     - clisops
   requires:
     - git  # Required by GitPython
-    - gitpython 
+    - gitpython
     - pip
     - pytest
     - pytest-loguru

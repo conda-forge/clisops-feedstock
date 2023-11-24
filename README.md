@@ -7,17 +7,16 @@ Home: https://pypi.org/project/clisops/
 
 Package license: BSD-3-Clause
 
-Summary: clisops - climate simulation operations
+Summary: CLISOPS - Climate simulation operations.
 
 Development: https://github.com/roocs/clisops
 
 Documentation: https://clisops.readthedocs.io/en/latest/
 
 The clisops package (pronounced "clie-sops") provides a python library for running
-data-reduction operations on xarray data sets or files
-that can be interpreted by xarray. These basic operations (subsetting, averaging and
-regridding) are likely to work where data structures are NetCDF-centric, such as those
-found in ESGF data sets.
+data-reduction operations on xarray data sets or files that can be interpreted by xarray.
+These basic operations (subsetting, averaging and regridding) are likely to work
+where data structures are NetCDF-centric, such as those found in ESGF data sets.
 
 
 Current build status
@@ -106,7 +105,7 @@ available continuous integration services. Thanks to the awesome service provide
 [CircleCI](https://circleci.com/), [AppVeyor](https://www.appveyor.com/),
 [Drone](https://cloud.drone.io/welcome), and [TravisCI](https://travis-ci.com/)
 it is possible to build and upload installable packages to the
-[conda-forge](https://anaconda.org/conda-forge) [Anaconda-Cloud](https://anaconda.org/)
+[conda-forge](https://anaconda.org/conda-forge) [anaconda.org](https://anaconda.org/)
 channel for Linux, Windows and OSX respectively.
 
 To manage the continuous integration and simplify feedstock maintenance
