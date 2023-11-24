@@ -39,7 +39,7 @@ requirements:
     - roocs-grids >=0.1.2
     - shapely >=1.9
     - sparse >=0.8.0  # Must be specified for xemsf (fixed with v0.7.0)
-    - xarray >=0.21
+    - xarray >=0.21,<2023.3.0 # Remove pin when xarray is fixed (see: https://github.com/pydata/xarray/issues/7794)
     - xesmf >=0.8.2
 
 test:
