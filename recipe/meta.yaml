@@ -34,8 +34,8 @@ requirements:
     - pooch
     - pyproj >=3.3.0
     - requests >=2.0
-    - roocs-utils >=0.6.4,<0.7
     - roocs-grids >=0.1.2
+    - roocs-utils >=0.6.4,<0.7
     - shapely >=1.9
     - xarray >=0.21
   run_constrained:
