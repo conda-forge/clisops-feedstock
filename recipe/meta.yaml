@@ -10,7 +10,7 @@ source:
   sha256: f0fd34ee51ce181fed9b2130b33e10e477a52b9db715143f12b2696d1b76c131
 
 build:
-  number: 0
+  number: 1
   noarch: python
   script: {{ PYTHON }} -m pip install . -vv
 
@@ -28,18 +28,17 @@ requirements:
     - geopandas >=0.11.0
     - loguru >=0.5.3
     - netCDF4 >=1.4
-    - numba  # Must be specified for xemsf (fixed with v0.7.0)
     - numpy >=1.16
     - packaging
     - pandas >=1.0.3
     - pooch
     - pyproj >=3.3.0
     - requests >=2.0
-    - roocs-utils >=0.6.4,<0.7
     - roocs-grids >=0.1.2
+    - roocs-utils >=0.6.4,<0.7
     - shapely >=1.9
-    - sparse >=0.8.0  # Must be specified for xemsf (fixed with v0.7.0)
-    - xarray >=0.21,<2023.3.0 # Remove pin when xarray is fixed (see: https://github.com/pydata/xarray/issues/7794)
+    - xarray >=0.21
+  run_constrained:
     - xesmf >=0.8.2
 
 test:
