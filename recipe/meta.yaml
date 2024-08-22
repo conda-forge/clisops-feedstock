@@ -1,5 +1,5 @@
 {% set name = "clisops" %}
-{% set version = "0.13.0" %}
+{% set version = "0.13.1" %}
 
 package:
   name: {{ name|lower }}
@@ -7,7 +7,7 @@ package:
 
 source:
   url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/{{ name }}-{{ version }}.tar.gz
-  sha256: 7eafdad3f13580cf0d63749e49c55e7ed1ae2822900d6289d08d4d73d782b5a6
+  sha256: 65d49df87b787e26fe3ab10eb1885cd14589be3ca75354753d34174794b00be4
 
 build:
   number: 0
@@ -16,19 +16,20 @@ build:
 
 requirements:
   host:
-    - python
-    - flit
+    - python >=3.9
+    - flit >=3.9,<4.0
     - pip
   run:
     - python >=3.9
     - bottleneck >=1.3.1
+    - cartopy >=0.23
     - cf_xarray >=0.8.6
     - cftime >=1.4.1
     - dask >=2.6
     - geopandas >=0.11.0
     - loguru >=0.5.3
     - netCDF4 >=1.4
-    - numpy >=1.16
+    - numpy >=1.16,<2.1
     - packaging
     - pandas >=1.0.3
     - platformdirs >=4.0
@@ -49,7 +50,7 @@ test:
     - git  # Required by GitPython
     - gitpython
     - pip
-    - pytest <8.0.0
+    - pytest >=8.0.0
     - pytest-loguru >=0.3.0
   source_files:
     - tests
