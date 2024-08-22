@@ -16,8 +16,8 @@ build:
 
 requirements:
   host:
-    - python
-    - flit
+    - python >=3.9
+    - flit >=3.9,<4.0
     - pip
   run:
     - python >=3.9
@@ -28,7 +28,7 @@ requirements:
     - geopandas >=0.11.0
     - loguru >=0.5.3
     - netCDF4 >=1.4
-    - numpy >=1.16
+    - numpy >=1.16,<2.1
     - packaging
     - pandas >=1.0.3
     - platformdirs >=4.0
@@ -49,7 +49,7 @@ test:
     - git  # Required by GitPython
     - gitpython
     - pip
-    - pytest <8.0.0
+    - pytest >=8.0.0
     - pytest-loguru >=0.3.0
   source_files:
     - tests
