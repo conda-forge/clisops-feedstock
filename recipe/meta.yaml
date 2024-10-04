@@ -17,7 +17,7 @@ build:
 requirements:
   host:
     - python >=3.9
-    - flit >=3.9,<4.0
+    - flit_core >=3.9,<4.0
     - pip
   run:
     - python >=3.9
@@ -25,21 +25,21 @@ requirements:
     - cartopy >=0.23
     - cf_xarray >=0.8.6
     - cftime >=1.4.1
-    - dask >=2.6
+    - dask >=2023.6.0
+    - filelock >=3.15.4"
     - geopandas >=0.11.0
     - loguru >=0.5.3
-    - netCDF4 >=1.4
-    - numpy >=1.16,<2.1
-    - packaging
-    - pandas >=1.0.3
+    - numpy >=1.23.0,<2.1
+    - packaging >=23.2.0
+    - pandas >=1.5.0
     - platformdirs >=4.0
-    - pooch
+    - pooch >=1.8.0
     - pyproj >=3.3.0
-    - requests >=2.0
     - roocs-grids >=0.1.2
     - roocs-utils >=0.6.7,<0.7
+    - scipy >=1.9.0
     - shapely >=1.9
-    - xarray >=0.21
+    - xarray >=2022.6.0
   run_constrained:
     - xesmf >=0.8.2
 
@@ -49,9 +49,11 @@ test:
   requires:
     - git  # Required by GitPython
     - gitpython
+    - netCDF4 >=1.4
     - pip
     - pytest >=8.0.0
     - pytest-loguru >=0.3.0
+    - pytest-xdist >=3.2
   source_files:
     - tests
   commands:
