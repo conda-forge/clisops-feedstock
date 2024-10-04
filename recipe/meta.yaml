@@ -47,8 +47,6 @@ test:
   imports:
     - clisops
   requires:
-    - git  # Required by GitPython
-    - gitpython
     - netCDF4 >=1.4
     - pip
     - pytest >=8.0.0
