@@ -1,5 +1,6 @@
 {% set name = "clisops" %}
 {% set version = "0.15.0" %}
+{% set python_min = "3.9" %}
 
 package:
   name: {{ name|lower }}
@@ -16,30 +17,34 @@ build:
 
 requirements:
   host:
-    - python >=3.9
+    - python {{ python_min }}
     - flit-core >=3.9,<4.0
     - pip
   run:
-    - python >=3.9
+    - python >={{ python_min }}
+    - aiohttp # Needed for HTTPFileSystem
     - bottleneck >=1.3.1
     - cartopy >=0.23
     - cf_xarray >=0.8.6
     - cftime >=1.4.1
     - dask >=2023.6.0
     - filelock >=3.15.4
-    - geopandas >=0.11.0
+    - fsspec >=2023.9.0
+    - geopandas >=0.14.0
+    - jinja2 >=2.11
     - loguru >=0.5.3
     - numpy >=1.23.0,<2.1
-    - packaging >=23.2.0
+    - packaging >=23.2
     - pandas >=1.5.0
     - platformdirs >=4.0
     - pooch >=1.8.0
     - pyproj >=3.3.0
+    - requests # Needed for HTTPFileSystem
     - roocs-grids >=0.1.2
-    - roocs-utils >=0.6.7,<0.7
     - scipy >=1.9.0
     - shapely >=1.9
-    - xarray >=2022.6.0
+    - xarray >=2022.9.0
+    - zarr
   run_constrained:
     - xesmf >=0.8.2
 
@@ -49,6 +54,7 @@ test:
   requires:
     - netCDF4 >=1.4
     - pip
+    - python {{ python_min }}
     - pytest >=8.0.0
     - pytest-loguru >=0.3.0
     - pytest-xdist >=3.2
@@ -74,7 +80,6 @@ about:
 
 extra:
   recipe-maintainers:
-    - ellesmith88
     - Zeitsperre
     - agstephens
     - cehbrecht
