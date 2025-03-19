@@ -59,10 +59,11 @@ test:
     - pytest-loguru >=0.3.0
     - pytest-xdist >=3.2
   source_files:
+    - pyproject.toml
     - tests
   commands:
     - pip check
-    - pytest tests
+    - pytest tests --numprocesses=s2
 
 about:
   home: https://pypi.org/project/clisops/
