@@ -156,5 +156,4 @@ Feedstock Maintainers
 * [@Zeitsperre](https://github.com/Zeitsperre/)
 * [@agstephens](https://github.com/agstephens/)
 * [@cehbrecht](https://github.com/cehbrecht/)
-* [@ellesmith88](https://github.com/ellesmith88/)
 
