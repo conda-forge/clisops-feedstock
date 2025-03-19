@@ -63,7 +63,7 @@ test:
     - tests
   commands:
     - pip check
-    - pytest tests --numprocesses=s2
+    - pytest tests --numprocesses=2
 
 about:
   home: https://pypi.org/project/clisops/
