@@ -1,5 +1,5 @@
 {% set name = "clisops" %}
-{% set version = "0.16.1" %}
+{% set version = "0.16.2" %}
 {% set python_min = "3.10" %}
 
 package:
@@ -8,7 +8,7 @@ package:
 
 source:
   url: https://pypi.org/packages/source/{{ name[0] }}/{{ name }}/{{ name }}-{{ version }}.tar.gz
-  sha256: 143fb87985879d656e5afa62462f6583edadaab91b45a9226eeaec42337a6421
+  sha256: 1a9755145249429ddb1e5398123936cb89b02bade737106e4dca5257ac82a372
 
 build:
   number: 0
