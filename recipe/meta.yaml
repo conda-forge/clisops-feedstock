@@ -54,7 +54,7 @@ test:
   imports:
     - clisops
   requires:
-    - netCDF4 >=1.4
+    - h5netcdf >=1.5.0
     - pip
     - python {{ python_min }}
     - pytest >=8.0.0
