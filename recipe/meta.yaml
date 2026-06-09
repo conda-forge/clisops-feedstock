@@ -1,5 +1,5 @@
 {% set name = "clisops" %}
-{% set version = "0.17.0" %}
+{% set version = "0.18.0" %}
 {% set python_min = "3.11" %}
 
 package:
@@ -8,7 +8,7 @@ package:
 
 source:
   url: https://pypi.org/packages/source/{{ name[0] }}/{{ name }}/{{ name }}-{{ version }}.tar.gz
-  sha256: ab5ac61b124eea07a34c1c4f7a28eb4b919ddcd67eb30ac0a50c20dfe91b8f99
+  sha256: dee3318b40b105fc54ee70a3e0ab218afb1fb52c6808e5833072fdf4e6bec8d0
 
 build:
   number: 0
@@ -34,7 +34,8 @@ requirements:
     - geopandas >=1.0
     - jinja2 >=2.11
     - loguru >=0.5.3
-    - numpy >=1.26.0,<2.3.0
+    - numcodecs <0.16.0 # FIXME: Pin required for zarr v2.x compatibility
+    - numpy >=1.26.0
     - packaging >=23.2
     - pandas >=2.2.0
     - platformdirs >=4.0
@@ -59,6 +60,7 @@ test:
     - python {{ python_min }}
     - pytest >=8.0.0
     - pytest-loguru >=0.3.0
+    - pytest-timeout >=2.4.0
     - pytest-xdist >=3.2
   source_files:
     - pyproject.toml
